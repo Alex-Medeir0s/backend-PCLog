@@ -26,18 +26,21 @@ public class ManutencaoPC {
     @Column(name = "foi_concluida")
     private Boolean foiConcluida;
 
+    @Column(name = "cliente")
+    private String cliente;
+
     public ManutencaoPC() {}
 
-    public ManutencaoPC(Long id, String equipamento, String tipoManutencao, Double custo, LocalDate dataManutencao, Boolean foiConcluida) {
+    public ManutencaoPC(Long id, String equipamento, String tipoManutencao, Double custo,
+                        LocalDate dataManutencao, Boolean foiConcluida, String cliente) {
         this.id = id;
         this.equipamento = equipamento;
         this.tipoManutencao = tipoManutencao;
         this.custo = custo;
         this.dataManutencao = dataManutencao;
         this.foiConcluida = foiConcluida;
+        this.cliente = cliente;
     }
-
-    // Getters e Setters
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -56,4 +59,7 @@ public class ManutencaoPC {
 
     public Boolean getFoiConcluida() { return foiConcluida; }
     public void setFoiConcluida(Boolean foiConcluida) { this.foiConcluida = foiConcluida; }
+
+    public String getCliente() { return cliente; }
+    public void setCliente(String cliente) { this.cliente = cliente; }
 }

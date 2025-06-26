@@ -11,8 +11,6 @@ import java.util.*;
 
 @RequestMapping("/manutencao/")
 @CrossOrigin(origins = { "http://localhost:3000", "http://10.0.2.2", "http://192.168.0.60" })
-
-
 @RestController
 public class ManutencaoPCController {
 
@@ -46,6 +44,7 @@ public class ManutencaoPCController {
         manutencao.setCusto(novaManutencao.getCusto());
         manutencao.setDataManutencao(novaManutencao.getDataManutencao());
         manutencao.setFoiConcluida(novaManutencao.getFoiConcluida());
+        manutencao.setCliente(novaManutencao.getCliente()); // novo campo
 
         return ResponseEntity.ok(manutencaoRep.save(manutencao));
     }
