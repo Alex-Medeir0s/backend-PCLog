@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.*;
 
 @RequestMapping("/manutencao/")
-@CrossOrigin(origins = { "http://localhost:3000", "http://localhost:4200" })
+@CrossOrigin(origins = { "http://localhost:3000", "http://10.0.2.2", "http://192.168.0.60" })
+
 
 @RestController
 public class ManutencaoPCController {
