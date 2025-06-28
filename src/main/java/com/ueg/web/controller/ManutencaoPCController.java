@@ -44,7 +44,9 @@ public class ManutencaoPCController {
         manutencao.setCusto(novaManutencao.getCusto());
         manutencao.setDataManutencao(novaManutencao.getDataManutencao());
         manutencao.setFoiConcluida(novaManutencao.getFoiConcluida());
-        manutencao.setCliente(novaManutencao.getCliente()); // novo campo
+        manutencao.setCliente(novaManutencao.getCliente());
+        manutencao.setCep(novaManutencao.getCep());             // <-- novo campo
+        manutencao.setEndereco(novaManutencao.getEndereco());   // <-- novo campo
 
         return ResponseEntity.ok(manutencaoRep.save(manutencao));
     }

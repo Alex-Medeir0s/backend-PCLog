@@ -29,10 +29,17 @@ public class ManutencaoPC {
     @Column(name = "cliente")
     private String cliente;
 
+    @Column(name = "cep")
+    private String cep;
+
+    @Column(name = "endereco")
+    private String endereco;
+
     public ManutencaoPC() {}
 
     public ManutencaoPC(Long id, String equipamento, String tipoManutencao, Double custo,
-                        LocalDate dataManutencao, Boolean foiConcluida, String cliente) {
+                        LocalDate dataManutencao, Boolean foiConcluida, String cliente,
+                        String cep, String endereco) {
         this.id = id;
         this.equipamento = equipamento;
         this.tipoManutencao = tipoManutencao;
@@ -40,7 +47,11 @@ public class ManutencaoPC {
         this.dataManutencao = dataManutencao;
         this.foiConcluida = foiConcluida;
         this.cliente = cliente;
+        this.cep = cep;
+        this.endereco = endereco;
     }
+
+    // Getters e Setters
 
     public Long getId() { return id; }
     public void setId(Long id) { this.id = id; }
@@ -62,4 +73,10 @@ public class ManutencaoPC {
 
     public String getCliente() { return cliente; }
     public void setCliente(String cliente) { this.cliente = cliente; }
+
+    public String getCep() { return cep; }
+    public void setCep(String cep) { this.cep = cep; }
+
+    public String getEndereco() { return endereco; }
+    public void setEndereco(String endereco) { this.endereco = endereco; }
 }
